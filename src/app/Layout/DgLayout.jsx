@@ -1,8 +1,8 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar/Lavaria/Sidebar'
+import Sidebar from '../components/Sidebar/DgLab/Sidebar'
 import Topbar from '../components/Common/Topbar'
 
-const Layout = ({children}) => {
+const DgLayout = ({children}) => {
 
   return (
     <main className='w-full flex relative bg-[#f5f5f5] h-screen overflow-x-hidden'>
@@ -17,4 +17,5 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout
+
+export default DgLayout

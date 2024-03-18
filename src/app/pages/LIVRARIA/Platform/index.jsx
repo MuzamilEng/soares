@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../../../components/Common/Sidebar'
+import Sidebar from '../../../components/Sidebar/Lavaria/Sidebar'
 import Topbar from '../../../components/Common/Topbar'
 import { Icon } from '@iconify/react'
 import Progressbar from '../../../components/Progressbar/Progressbar'

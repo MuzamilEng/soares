@@ -1,5 +1,5 @@
 import React from 'react'
-import { sidebar } from '../../data'
+import { sidebar } from '../../../data'
 import { Link } from 'react-router-dom'
 
 const Sidebar = () => {

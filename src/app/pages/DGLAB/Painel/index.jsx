@@ -1,9 +1,9 @@
 import React from 'react'
 import { Icon } from '@iconify/react'
 import Progressbar from '../../../components/Progressbar/Progressbar'
-import Layout from '../../../Layout/Layout'
 import Button from '../../../components/Common/Button'
 import SearchField from '../../../components/Common/SearchField'
+import DgLayout from '../../../Layout/DgLayout'
 
 const Painel = () => {
   const status = [
@@ -18,7 +18,7 @@ const Painel = () => {
   ]
 
   return (
-   <Layout>
+   <DgLayout>
     <section className='w-full grid grid-cols-2'>
         <aside className='w-full mt-[2vw] max-w-[30vw] bg-[#ffff] p-[2vw] rounded-[1vw]'>
           <p className='text-[1.5vw] font-black'>Aprovação das Livrarias  <br /> Aderentes</p>
@@ -49,7 +49,7 @@ const Painel = () => {
             <p className='text-[1.3vw] mt-[1vw] font-bd text-[#4B4752]'>Livraria Lello & Irmão</p>
             <p className='text-[1.3vw] mt-[1vw] font-bd text-[#4B4752]'>Livraria Lello & Irmão</p>
         </main>
-        <Button title={'Ver Todas'}/>
+        <div className="w-full max-w-[25vw]"><Button title={'Ver Todas'}/></div>
         </aside>
         <aside className='w-full mt-[2vw] max-w-[30vw] bg-[#ffff] p-[2vw] rounded-[1vw]'>
             <p className='text-[1.5vw] font-black'>Consulta de <br />Livrarias</p>
@@ -66,7 +66,7 @@ const Painel = () => {
             </div>
         </aside>
       </section>
-   </Layout>
+   </DgLayout>
   )
 }
 

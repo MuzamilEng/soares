@@ -32,7 +32,9 @@ const Pogamento = () => {
         <p className="text-[1.3vw] text-[#4B4752] font-md"><span className='text-[#6930C0]'>ou selecione um</span> arquivo do seu computador  </p>
         </div>
         </section>
+        <div className="w-full max-w-[25vw]">
         <Button title={'ENVIAR'}/>
+        </div>
         </main>
     </Layout>
   )

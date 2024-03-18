@@ -15,8 +15,7 @@ export const sidebar = [
         path: "/gastao",
     },
     {
-        // icon: <Icon icon="ri:file-user-line" />,
-        icon: <Icon icon="jam:ticket" />,
+        icon: <Icon icon="ri:file-user-line" />,
         title: "Dados de Identificação",
         path: "/dadoas",
     },
@@ -50,6 +49,39 @@ export const sidebar = [
         title: "Pagamento do Voucher",
         path: "/pogamento-voucher",
     }
+]
+
+export const dg_sidebar = [
+    {
+        img: "/img/comp.png",
+        title: "Painel",
+        path: "/dg-painel",
+    },
+    {
+        img: '/img/book_icon.png',
+        title: "Validar Livro",
+        path: "/dg-valodacao",
+    },
+    {
+        icon: <Icon icon="ri:file-user-line" />,
+        title: "Dados das Livrarias",
+        path: "/dg-dadoas",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Envio de Mensagens",
+        path: "/dg-messagens",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Relatório de Voucher",
+        path: "/dg-relatorioVoucher",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Relatório de Livraria",
+        path: "/dg-relatorioLaviria",
+    },
 ]
 
 export const dadoas_record = [
@@ -153,6 +185,89 @@ export const validaco_voucher = [
         text_color: "text-[#80FFD8]"
     },
 
+]
+export const relatorio_voucher = [
+    {
+        title: "Diego Pina de Sá",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Michael Knight",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Dori Doreau",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Rick Wright",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Peter Thornton",
+        id:'874d2093g',
+        status: "Emitido",
+
+    },
+    {
+        title: "April Curtis",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Dr. Bonnie Barstow ",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Mike Torello",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Lynn Tanner",
+        id:'874d2093g',
+        status: "Emitido",
+
+    },
+    {
+        title: "Willie Tanner",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+
+]
+export const relatorioLaviria = [
+    {
+        title: "Diego Pina de Sá",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Michael Knight",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Dori Doreau",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Rick Wright",
+        id:'874d2093g',
+        status: "Emitido",
+    },
+    {
+        title: "Peter Thornton",
+        id:'874d2093g',
+        status: "Emitido",
+
+    }
 ]
 
 export const utilizacado_records = [
