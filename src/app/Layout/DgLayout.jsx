@@ -5,11 +5,11 @@ import Topbar from '../components/Common/Topbar'
 const DgLayout = ({children}) => {
 
   return (
-    <main className='w-full flex relative bg-[#f5f5f5] h-screen overflow-x-hidden'>
-      <section className='fixed'>
+    <main className='md:w-full md:flex md:relative md:bg-[#f5f5f5] md:h-screen md:overflow-x-hidden'>
+      <section className='flex flex-col  fixed'>
         <Sidebar />
       </section>
-      <section className='w-full ml-[20vw] flex flex-col'>
+      <section className='md:w-full hidden md:block md:ml-[20vw]'>
       <Topbar title={'Painel'} date={'8, March 2024'} />
         {children}
       </section>

@@ -1,6 +1,7 @@
 import React from 'react'
-import { useGlobalContext } from '../../context/GlobalStateProvider'
+import { useGlobalContext } from '../context/GlobalStateProvider'
 import MobileDgSidebar from '../components/Sidebar/DgLab/MobileSideBar'
+import { Icon } from '@iconify/react'
 
 
 const DgMobileLayout = ({children}) => {
@@ -17,7 +18,7 @@ const DgMobileLayout = ({children}) => {
       <img src="/img/logo-p.png" alt="book logo" className="w-full object-cover" />
     </figure>
     {hamburger? <div className="w-full max-w-[8vw] mt-[20vw]" onClick={toggleMenue}>
-    <img src="/img/menue.png" alt="menue icon" className="w-full object-cover"  />        
+    <Icon icon="mingcute:menu-fill" className="text-[6vw]" />
     </div>:<></>
     }
    </article>

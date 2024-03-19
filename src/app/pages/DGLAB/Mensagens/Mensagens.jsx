@@ -4,6 +4,7 @@ import SearchField from '../../../components/Common/SearchField'
 import SelectField from '../../../components/SelectField/SelectField'
 import Button from '../../../components/Common/Button'
 import { Icon } from '@iconify/react'
+import DgMobileLayout from '../../../Layout/DgMobileLayout'
 
 const Mensagens = () => {
   const [messageText, setMessageText] = useState('');
@@ -36,6 +37,7 @@ const Mensagens = () => {
   ]
 
   return (
+    <>
         <DgLayout>
         <section className='w-full grid grid-cols-2 gap-[1vw]'>
             <aside className='w-full max-w-[35vw] p-[1vw]'>
@@ -74,6 +76,47 @@ const Mensagens = () => {
             </aside>
         </section>
         </DgLayout>
+
+        <DgMobileLayout>
+        <section className=' md:hidden  flex flex-col '>
+            <aside className='mt-[10vw] px-[10vw]'>
+                <h1 className='text-[#4B4752] font-heavy w-full max-w-[60vw] text-[8vw]'>Envio de Mensagens <br />ao Livreiro</h1>
+                <div className="mt-[3vw] w-full">
+                <h1 className='text-[3.5vw] text-[#4B4752] font-bd'>Livreiro</h1>
+                <SearchField />
+                </div>
+                <section className="mt-[1vw] w-full">
+                <SelectField name={'Mensagem'} title={'Livreiro'} options={options} />
+                <p className='flex w-full p-[1.3vw] text-[#4B4752] font-md py-[3vw] mt-[1vw] text-[3.5vw] bg-[#ECECEC] rounded-md'>
+                Caro livreiro, lembre-se de manter seus registros atualizados e em conformidade com as normas da DGLAB para garantir a qualidade e precisão das informações sobre seu acervo.
+                </p>
+                <Button title={'Enviar'}/>
+                </section>
+            </aside>
+            <aside className='mt-[10vw] px-[10vw]'>
+                <h1 className='text-[#4B4752] font-heavy w-full text-[8vw]'>Chatao <br />ao Livreiro</h1>
+                <div className="mt-[1vw] w-full">
+                <SelectField name={'lavireo'} title={'Livreiro'} options={options} />
+                </div>
+                <main className='w-full bg-[#ECECEC] p-[2vw] mt-[2vw] rounded-[1vw]'>
+                <main className='w-full relative p-[1.5vw] h-[43vw] overflow-y-scroll custom-scrollbar'>
+                  {messages?.map((message, index)=> {
+                    return (
+                      <p key={index} className={`text-[3.5vw] mt-[1vw] rounded-[0.7vw] w-full max-w-[50vw] p-[1vw] font-bd ${index % 2 == 0 ? 'bg-[#6930C0] ml-auto text-[#ffff]': 'bg-[#fff] mr-auto text-[#4B4752]'}`}>{message}</p>
+                    )
+                  })}
+                </main>
+                </main>
+                <section className='w-full bg-[#ECECEC] p-[2.5vw] rounded-[1vw] mt-[1vw] flex items-center focus:outline-none'>
+                  <input onKeyDown={handleKeyPress} type="text" name='messageText' value={messageText} onChange={handleMessageChange} placeholder='Mensagem' className='text-[#4B4752] font-li bg-inherit border-none focus:outline-none w-full' />
+                  <Icon icon="wpf:attach" className='text-[3.2vw] ml-auto cursor-pointer text-[#000] ' />
+                </section>
+                <Button title={'Enviar'}/>
+            </aside>
+        </section>
+        </DgMobileLayout>
+       
+    </>
   )
 }
 

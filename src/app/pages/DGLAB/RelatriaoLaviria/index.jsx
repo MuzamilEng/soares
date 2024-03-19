@@ -1,11 +1,13 @@
 import React from "react";
 import SearchField from "../../../components/Common/SearchField";
-import {  relatorioLaviria } from "../../../data";
+import {  dadoas_record, relatorioLaviria } from "../../../data";
 import Paggination from "../../../components/Common/Paggination";
 import DgLayout from "../../../Layout/DgLayout";
+import DgMobileLayout from "../../../Layout/DgMobileLayout";
 
 const RelatriaoLaviria = () => {
   return (
+    <>
     <DgLayout>
         <main className='w-full'>
         <h1 className='mt-[1vw] text-[2vw] text-[#4B4752] font-black'>Relatório de Livraria</h1>
@@ -35,6 +37,30 @@ const RelatriaoLaviria = () => {
         </section>
         </main>
     </DgLayout>
+
+    <DgMobileLayout>
+      <section className='w-full md:hidden ml-[9.5vw] pb-[8vw]'>
+      <h1 className='mt-[20vw] text-[10vw] text-[#4B4752]  w-full max-w-[60vw] font-bd'>Relatório de Voucher</h1>
+      <p className="text-[#4B4752] font-bd text-[4.5vw] mt-[4vw]">Buscar por eligibilidade do livro</p>
+      <form className='relative w-full max-w-[100vw] mt-[8vw] px-[10vw] flex ml-[-10vw] flex-col  gap-[2vw]'>
+    <label htmlFor="search" className='font-bd text-[4vw]'>ID do Voucher</label>
+     <input type="text" name="search" className="w-full  p-[1.5vw] bg-[#ECECEC] ml-[1vw] outline-none text-[4.5vw]" />
+    <label htmlFor="search" className='font-bd text-[4vw]'>Nome Impresso no Voucher</label>
+    <SearchField />
+    </form>
+     <article className=' mt-[4vw]'>
+            {dadoas_record?.map((record, index)=> (
+                <div className="text-[#4B4752] mt-[1.3vw] p-[3vw]" key={index}>
+                    <h2 className='font-bd text-[3.5vw]'>{record?.title}</h2>
+                    <h1 className='font-black text-[3vw]'>{record?.value}</h1>
+                </div>
+            ))}
+            <h1 className="mt-[1vw] text-[3vw] text-[#4B4752] font-black">Status do Voucher</h1>
+            <button className='text-[#80FFD8] mt-[5vw] bg-[#6930C0] p-[1vw] font-bd rounded-[1.2vw] text-center w-full max-w-[50vw]'>Voucher Emitido</button>
+        </article>
+      </section>
+    </DgMobileLayout>
+    </>
   );
 };
 
