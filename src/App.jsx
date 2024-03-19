@@ -16,11 +16,18 @@ import Mensagens from './app/pages/DGLAB/Mensagens/Mensagens'
 import RelatorioVoucher from './app/pages/DGLAB/RelatorioVoucher'
 import RelatriaoLaviria from './app/pages/DGLAB/RelatriaoLaviria'
 import UsarioPainel from './app/pages/USUARIO/Painel'
+import Login from './app/pages/USUARIO/Login/Login'
+import LavariaLogin from './app/pages/LIVRARIA/Login/LavariaLogin'
+import Authenticate from './app/pages/LIVRARIA/Authenticate/Authenticate'
+import DgLogin from './app/pages/DGLAB/Login/DgLogin'
 
 export const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<Platform />} />
+      <Route path='/' element={<Authenticate />} />
+      <Route path='/lavaria-login' element={<LavariaLogin />} />
+      <Route path='/dgLab-login' element={<DgLogin />} />
+      <Route path='/painel' element={<Platform />} />
       <Route path='/gastao' element={<Gastao />} />
       <Route path='/dadoas' element={<Dadoas />} />
       <Route path='/validaco' element={<Validaco />} />
@@ -36,6 +43,8 @@ export const App = () => {
       <Route path='/dg-relatorioVoucher' element={<RelatorioVoucher />} />
       <Route path='/dg-relatorioLaviria' element={<RelatriaoLaviria />} />
       <Route path='/usario-painel' element={<UsarioPainel />} />
+      <Route path='/usario-login' element={<Login />} />
+
     </Routes>
   )
 }

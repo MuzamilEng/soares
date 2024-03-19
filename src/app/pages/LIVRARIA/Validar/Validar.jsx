@@ -1,11 +1,13 @@
 import React from 'react'
 import Layout from '../../../Layout/Layout'
 import SearchField from '../../../components/Common/SearchField'
+import MobileLayout from '../../../Layout/MobileLayout'
 
 const Validar = () => {
   return (
+    <>
     <Layout>
-        <main className='w-full'>
+        <main className='w-full hidden md:block'>
         <h1 className='mt-[1vw] text-[2vw] text-[#4B4752] font-black'>Validação de Livro</h1>
         <h1 className='mt-[1vw] text-[1.2vw] text-[#4B4752] font-black'>Buscar por eligibilidade do livro</h1>
         <section className='flex items-center w-full'>
@@ -31,6 +33,25 @@ const Validar = () => {
         </article>
         </main>
     </Layout>
+
+    <MobileLayout>
+      <section className='w-full md:hidden ml-[9.5vw]'>
+      <h1 className='mt-[20vw] text-[10vw] text-[#4B4752]  w-full max-w-[70vw] font-bd'>Validação de Livro</h1>
+      <p className="text-[#4B4752] font-bd text-[4.5vw] mt-[4vw]">Buscar por eligibilidade do livro</p>
+      <form className='relative w-full max-w-[100vw] mt-[8vw] px-[10vw] flex ml-[-10vw] items-center gap-[2vw]'>
+    <label htmlFor="search" className='font-bd text-[5vw]'>ISBN:</label>
+    <SearchField />
+    </form>
+    <p className='text-[#4B4752] font-bd text-[5vw] mt-[15vw]'>Durante a Queda Aprendi a Voar</p>
+    <p className="text-[#4B4752] text-[4vw]  font-md mt-[2vw]">Raul Minh`Alma</p>
+    <p className='text-[#4B4752] text-[3.5vw] font-md mt-[2vw]'>9789898975683</p>
+    <p className='text-[#4B4752] text-[3.5vw] font-md mt-[2vw]'>Manuscrito Editora</p>
+    <button className='text-[#80FFD8] bg-[#6930C0] px-[5vw] py-[1vw] mt-[3vw] font-bd rounded-[1.2vw] text-center w-full max-w-[30vw]'>Elegível</button>
+    <p className='text-[#4B4752] ml-[20vw] mt-[10vw] font-md text-[3vw] '>1 Resultado encontrado</p>
+    </section>
+    </MobileLayout>
+    </>
+
   )
 }
 
