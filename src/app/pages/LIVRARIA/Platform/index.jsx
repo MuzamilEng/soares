@@ -4,6 +4,8 @@ import Topbar from '../../../components/Common/Topbar'
 import { Icon } from '@iconify/react'
 import Progressbar from '../../../components/Progressbar/Progressbar'
 import Layout from '../../../Layout/Layout'
+import MobileLayout from '../../../Layout/MobileLayout'
+import { useGlobalState } from '../../../../context/GlobalStateProvider'
 
 const Platform = () => {
   const status = [
@@ -26,10 +28,16 @@ const Platform = () => {
       title: "Pago"
     }
   ]
-
+const {setMenueBar,setHamburger,hamburger} = useGlobalState()
+const toggleMenue =()=>{
+  setMenueBar(true)
+  setHamburger(false)
+}
   return (
+    <>
+   
    <Layout>
-    <section className='w-full'>
+    <section className='w-full hidden md:block'>
         <article className='w-full mt-[1vw] ml-[1vw]'>
         <div className="flex items-center">
         <Icon icon="teenyicons:user-circle-outline" className='text-[1vw] text-black font-medium' />
@@ -69,7 +77,35 @@ const Platform = () => {
           </section>
         </aside>
       </section>
-   </Layout>
+      </Layout>
+
+
+
+      {/* mobile layout  */}
+      <MobileLayout>
+
+     
+      <section className=' md:hidden  flex flex-col  px-[10vw]'>
+       
+      
+      
+      <article className="mt-[20vw]">
+        <div className="flex w-full items-center gap-[2vw]">
+          <div className='w-full max-w-[7vw]'>
+          <img src="/img/profile-icon.png" alt="profile" className="w-full" />  
+          </div>
+          <p className='font-heavy text-[3vw]'>Gestor</p>
+          </div>
+
+          <div className="mt-[20vw]">
+            <p className="text-[#6930C0] font-heavy w-full max-w-[50vw] text-[4.5vw] ">Bem Vindo de Volta, Bertrand Livreiros</p>
+            <p className="text-[#4B4752] font-md text-[4vw] mt-[15vw]">Lorem ipsum dolor sit amet consectetur. Lacus aliquet pharetra nec quam orci proin commodo. Sit interdum</p>
+          </div>
+        </article>
+       
+      </section>
+      </MobileLayout>
+      </>
   )
 }
 

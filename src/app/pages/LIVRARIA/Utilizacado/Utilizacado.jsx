@@ -3,12 +3,15 @@ import SearchField from "../../../components/Common/SearchField";
 import Layout from "../../../Layout/Layout";
 import { utilizacado_records } from "../../../data";
 import Paggination from "../../../components/Common/Paggination";
+import MobileLayout from "../../../Layout/MobileLayout";
+import { Icon } from "@iconify/react";
 
 const Utilizacado = () => {
     const tableFields  = ['Nome', 'ID', 'NIF', 'ISBN', 'Valor', 'Status']
   return (
+    <>
     <Layout>
-      <main className="w-full">
+      <main className="w-full hidden md:block">
         <h1 className="mt-[1vw] text-[2vw] text-[#4B4752] font-black"> Utilização do Voucher </h1>
         <div className="">
          <h1 className="mt-[1vw] ml-[1vw] text-[1vw] text-[#4B4752] font-black"> ISBN </h1>
@@ -32,6 +35,10 @@ const Utilizacado = () => {
             <Paggination />
       </main>
     </Layout>
+
+   
+    </>
+
   );
 };
 

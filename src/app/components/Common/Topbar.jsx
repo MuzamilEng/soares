@@ -3,7 +3,7 @@ import React from 'react'
 
 const Topbar = ({title, date, search}) => {
   return (
-    <nav className='w-full p-[1vw]'>
+    <nav className='w-full p-[1vw] hidden md:block'>
         <div className="flex items-center w-full">
             <section className='w-full flex items-center justify-between max-w-[80vw]'>
                 <h1 className='text-[2vw] text-black font-black'>{title}</h1>

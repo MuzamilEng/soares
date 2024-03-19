@@ -1,20 +1,20 @@
-import React from 'react'
-import Sidebar from '../components/Sidebar/Lavaria/Sidebar'
-import Topbar from '../components/Common/Topbar'
+import React from 'react';
+import Sidebar from '../components/Sidebar/Lavaria/Sidebar';
+import Topbar from '../components/Common/Topbar';
 
-const Layout = ({children}) => {
-
+const Layout = ({ children }) => {
   return (
-    <main className='w-full flex relative bg-[#f5f5f5] h-screen overflow-x-hidden'>
-      <section className='fixed'>
+    <main className='md:w-full md:flex md:relative md:bg-[#f5f5f5] md:h-screen md:overflow-x-hidden'>
+      <section className='flex flex-col  fixed '>
         <Sidebar />
       </section>
-      <section className='w-full ml-[20vw] flex flex-col'>
-      <Topbar title={'Painel'} date={'8, March 2024'} />
+      <section className='md:w-full md:ml-[20vw]'>
+        <Topbar title={'Painel'} date={'8, March 2024'} />
         {children}
       </section>
-    </main>
-  )
-}
 
-export default Layout
+    </main>
+  );
+};
+
+export default Layout;

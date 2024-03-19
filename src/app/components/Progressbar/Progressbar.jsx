@@ -7,11 +7,11 @@ const Progressbar = ({ percent_count, color }) => {
       };
   
     return (
-      <article className='w-full m-[1vw] max-w-[1vw]'>
-        <main className='bg-[#D9D9D9] relative w-full h-[12vw] rounded-[0.8vw]'>
-          <p style={progressBarStyle} className="absolute bottom-0 w-full rounded-[0.8vw]"></p>
+      <article className='w-full m-[1vw]  max-w-[2vw]'>
+        <main className='bg-[#D9D9D9] relative w-full h-[35vw] rounded-[0.8vw]'>
+          <p style={progressBarStyle} className="absolute bottom-0   w-full rounded-[0.8vw]"></p>
         </main>
-        <p className='text-[1vw] font-bold mt-[0.7vw]'>{percent_count}%</p>
+        <p className='text-[2.5vw] font-bold mt-[2vw] ml-[-1vw] '>{percent_count}%</p>
       </article>
     );
   }

@@ -51,6 +51,54 @@ export const sidebar = [
     }
 ]
 
+export const mobileSidebar = [
+    {
+        // icon: <Icon icon="mage:television-minus" />,
+        img: "/img/comp.png",
+        title: "Painel",
+        path: "/painel",
+    },
+    {
+        icon: <Icon icon="fa6-solid:user-gear" />,
+        title: "Gestão de Perfil",
+        path: "/gastao",
+    },
+    {
+        icon: <Icon icon="ri:file-user-line" />,
+        title: "Dados de Identificação",
+        path: "/dadoas",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Registrar Voucher",
+        path: "/registrar-voucher",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Validação do Voucher",
+        path: "/validaco",
+    },
+    {
+        img: '/img/book_icon.png',
+        title: "Validar Livro",
+        path: "/validar",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Validação do Voucher",
+        path: "/validaco-voucher",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Utilização do Voucher",
+        path: "/utilizacado-voucher",
+    },
+    {
+        icon: <Icon icon="jam:ticket" />,
+        title: "Pagamento do Voucher",
+        path: "/pogamento-voucher",
+    }
+]
 export const dg_sidebar = [
     {
         img: "/img/comp.png",
